@@ -1,0 +1,204 @@
+@import "../../style/_variables";
+.repaymentWrap {
+  overflow-y: scroll;
+  background: #f0f0f0;
+  .appName {
+    width: 100%;
+    color: #333;
+    font-size: 20px;
+    line-height: 240%;
+    text-align: center;
+    background: #e2e2e2;
+  }
+}
+
+.repaymentContain {
+  max-width: 540px;/*no*/
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  padding: 15px;
+  overflow: hidden;
+  .infoPage {
+    border-radius: 10px;
+  }
+}
+
+.headerTopWrap {
+  padding: 20px 0;
+  background-image: linear-gradient(to bottom right, @header-bg-color-top,@header-bg-color-bottom);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  .dateUnitWrap, .dateUnitWrap_overdue {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center!important;
+    .header-current-day {
+      display: inline-block;
+      color: @header-current-day;
+      font-size: 40px;
+      font-weight: bold;
+      height: 100%;
+    }
+
+    .header-current-unit {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+      color: @header-current-unit;
+    }
+  }
+  .dateUnitWrap_overdue {
+    .header-current-day {
+      color: @header-overdue-day;
+    }
+    .header-current-unit {
+      color: @header-overdue-unit;
+    }
+  }
+  .repayment_wrap {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .left_item {
+      border-right: 1px solid #ccc;
+    }
+    .right_item, .left_item {
+      width: 50%;
+      text-align: center;
+      .val {
+        font-size: 22px;
+        color: @header-bottom-color;
+        line-height: 150%;
+      }
+      .des {
+        font-size: 16px;
+        color: @header-bottom-color;
+      }
+    }
+  }
+}
+
+.custInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 30px auto 0;
+  border-radius: 4px;
+  padding: 10px;
+  background: #eee;
+}
+
+.loan_detail_wrap {
+  background-color: #fff;
+  .loan_days_wrap, .loan_status_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 16px 4px;
+  }
+  .loan_status_wrap {
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .loan_status_text, .loan_days_text {
+    color: @loan-value-text;
+    line-height: 100%;
+    font-size: 16px;
+  }
+  .loan_status_val, .loan_days_val {
+    color: @loan-value-val;
+    line-height: 100%;
+    font-size: 16px;
+  }
+  .loan_status_val_overdue {
+    color: red;
+  }
+  .loan_username_val {
+    text-align: right;
+  }
+}
+
+.space-20 {
+  height: 20px;
+  background: #F0F0F0;
+}
+
+.loan_money_wrap {
+  margin: 0 auto;
+  width: 90%;
+  border-bottom: 1px solid #F0F0F0;
+  padding: 25px 0 18px;
+  .loan_money_text {
+    color: #9999;
+    line-height: 100%;
+    font-size: 14px;
+    margin-bottom: 18px;
+  } .loan_money_val {
+      color: #505050;
+      line-height: 100%;
+      font-size: 18px;
+    }
+}
+
+.repaymentBtn {
+  display: block;
+  outline: none;
+  max-width: 90%;
+  width: 90%;
+  font-size: 18px;
+  border-radius: 20px;
+  text-align: center;
+  background: linear-gradient(to right, @normal-btn-top-color, @normal-btn-bottom-color);
+  border: 1PX solid @normal-btn-bottom-color;
+  color: #fff;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.repaymentBtn:hover, .repaymentBtn[disabled] {
+  opacity: .7
+}
+
+.pt_20 {
+  padding-top: 20px;
+}
+.payee_information_wrap {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: @header-bg-color-top;
+  .title {
+    color: #333;
+    font-size: 16px;
+    line-height: 160%;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px #333 dashed;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .payee_item_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left_item {
+      color: #000;
+      font-size: 16px;
+      line-height: 160%;
+    }
+    .right_item {
+      color: #000;
+      font-size: 16px;
+      line-height: 160%;
+      text-align: right;
+      max-width: 70%;
+    }
+  }
+}
