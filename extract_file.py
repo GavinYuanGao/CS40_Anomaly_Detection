@@ -5,7 +5,7 @@ import os
 import shutil
 
 
-# gavin 来过
+# gavin second time change
 # harris 也来过 芜湖
 
 def find_dangerous(all_id_file):
